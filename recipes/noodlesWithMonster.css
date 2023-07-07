@@ -4,14 +4,17 @@ html{
 }
 
 .MONSTER{
-    width: 100px;
-    height: 100px;
+    object-position: center;
+    width: 200px;
+    height: 200px;
+    animation-name: rotate;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
 }
 
 .MONSTER:hover{
-    animation-name: rotate;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
+    animation-play-state: running;
 }
 
 @keyframes rotate{
@@ -19,6 +22,6 @@ html{
         transform: rotate(0);
     }
     100%{
-        transform: rotate(720deg);
+        transform: rotate(360deg);
     }
 }
