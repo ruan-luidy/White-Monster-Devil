@@ -1,6 +1,6 @@
-html{
-    height: 100%;
-    margin: 0;
+@font-face {
+    font-family: gasti;
+    src: url(GhastlyPixe.ttf);
 }
 
 body{
@@ -8,34 +8,56 @@ body{
     text-align: center;
 }
 
-title{
-    width: auto;
-    margin: auto;
-    text-align: center;
+.title{
+    position: absolute;
+    right: 50%;
+    top: 5%;
+    font-size: 5em;
+    font-family: gasti;
+    transform: translate(50%, -50%);
+    text-shadow: 1px 1px 1px #919191,
+                 1px 2px 1px #919191,
+                 1px 3px 1px #919191,
+                 1px 4px 1px #919191,
+                 1px 5px 1px #919191,
+                 1px 6px 1px #919191,
+                 1px 7px 1px #919191,
+                 1px 8px 1px #919191,
+                 1px 9px 1px #919191,
+                 1px 10px 1px #919191,
+             1px 18px 6px rgba(16,16,16,0.4),
+             1px 22px 10px rgba(16,16,16,0.2),
+             1px 25px 35px rgba(16,16,16,0.2),
+             1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.monsterdiv{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: auto;
+    animation: tilt 3s linear infinite;
 }
 
 .MONSTER{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    width: 250px;
-    height: 250px;
-    animation-name: rotate;
-    animation-duration: 0.7s;
-    animation-iteration-count: infinite;
-    animation-play-state: paused;
+    width: 500px;
+    height: auto;
+    animation: floating 3s ease-in-out infinite;
 }
 
-.MONSTER:hover{
-    animation-play-state: running;
+@keyframes floating{
+    0%{transform: translate(0, 0px);}
+    50%{transform: translate(0, 10px);}
+    100%{transform: translate(0, -0px);}
+    
 }
 
-@keyframes rotate{
-    0%{
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+@keyframes tilt{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(5deg);}
+    100%{transform: rotate(0deg);}
 }
