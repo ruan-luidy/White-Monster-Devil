@@ -1,4 +1,3 @@
-# odin-recipes
-My first Github repo!
+# I HATE WHITEMONSTER
 
-Making a web dev about recipes i hate the most.
+Matando tempo e aprendendo coisa de webdev.
